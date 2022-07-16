@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"澹台烬"</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .con {
+        width: 600px;
+        margin: 30px auto;
+    }
+
+    .ul1 {
+        display: flex;
+    }
+
+    .ul1 li {
+        position: relative;
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+    }
+
+    .ul1 li span {
+        position: absolute;
+        top: 42%;
+        left: 42%;
+        display: block;
+        width: 5px;
+        height: 5px;
+        background-color: #fff;
+        display: none;
+    }
+
+    .ul1 .li1 {
+        background-color: skyblue;
+    }
+
+    .ul1 .li2 {
+        background-color: rgb(21, 182, 83);
+    }
+
+    .ul1 .li3 {
+        background-color: rgb(172, 127, 255);
+    }
+
+    .ul2 {
+        width: 360px;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+    }
+
+    .ul2 li {
+        list-style: none;
+        width: 60px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid green;
+        color: green;
+    }
+</style>
+
+<body>
+    <div class="con">
+        <ul class="ul1">
+            <li class="li1" onclick="smallChange1()"><span class="span1"></span></li>
+            <li class="li2" onclick="smallChange2()"><span class="span2"></span></li>
+            <li class="li3" onclick="smallChange3()"><span class="span3"></span></li>
+        </ul>
+        <div class="ul2">
+            <li>新闻</li>
+            <li>娱乐</li>
+            <li>体育</li>
+            <li>电影</li>
+            <li>音乐</li>
+            <li>旅游</li>
+        </div>
+    </div>
+</body>
+<script>
+
+    var ul2 = document.querySelector('.ul2')
+    var body = document.querySelector('body')
+
+    var span1 = document.querySelector('.span1')//中心小白点
+    var span2 = document.querySelector('.span2')
+    var span3 = document.querySelector('.span3')
+
+    function smallChange1() {
+        body.style.background = 'pink'
+        ul2.style.background = 'blue'
+        span1.style.display = 'block'
+        span2.style.display = 'none'
+        span3.style.display = 'none'
+    }
+    function smallChange2() {
+        body.style.background = 'yellow'
+        ul2.style.background = 'rgb(81, 175, 81)'
+        span2.style.display = 'block'
+        span1.style.display = 'none'
+        span3.style.display = 'none'
+    }
+    function smallChange3() {
+        body.style.background = 'orange'
+        ul2.style.background = 'purple'
+        span3.style.display = 'block'
+        span1.style.display = 'none'
+        span2.style.display = 'none'
+    }
+</script>
+
+</html>

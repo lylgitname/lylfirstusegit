@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"澹台烬"</title>
+    <style>
+        .box {
+            margin: 30px auto;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: olivedrab;
+        }
+        .con {
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            width: 250px;
+            height: 250px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" onmousemove="move()" onmouseout="out()">
+        <div class="con">
+            鼠标移入改变样式，鼠标移出恢复。
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var box = document.querySelector('.box')
+    var con = document.querySelector('.con')
+    
+    function move(){
+        box.style.background = 'red'
+        con.style.background = '#fff'
+        con.style.color = 'red'
+    }
+
+    function out(){
+        box.style.background = 'olivedrab'
+         con.style.color = '#fff'
+        con.style.background = 'olivedrab'
+    }
+</script>
