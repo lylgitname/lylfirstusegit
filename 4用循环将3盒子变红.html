@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"澹台烬"</title>
+    <style>
+        .box {
+            width: 800px;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box div {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" id="btn" value="点击用for循环将div变成红色" onclick="change()" />
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var div = document.querySelectorAll('.box div')
+
+   function change(){
+        for (var i = 0; i < div.length; i++) {
+            div[i].style.background = 'red'
+        }
+    }
+</script>
