@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"澹台烬"</title>
+</head>
+
+<body>
+    <div class="con">
+        <button onclick="changeWidth()">变宽</button>
+        <button onclick="changeHeight()">变高</button>
+        <button onclick="changeColor()">变色</button>
+        <button onclick="changeNone()">隐藏</button>
+        <button onclick="changeBlock()">重置</button>
+        <div class="box">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var box = document.querySelector('.box')
+    console.log(box);
+    function changeWidth() {
+        box.style.width = '200px'
+    }
+    function changeHeight() {
+        box.style.height = '200px'
+    }
+    function changeColor() {
+        box.style.background = 'green'
+    }
+    function changeNone() {
+        box.style.display = 'none'
+    }
+    function changeBlock() {
+        // 直接让box的css样式Text 改变
+         box.style.cssText = "background-color: pink; width: 100px; height: 100px;";
+        // box.style.display = 'block'
+        // box.style.width = '100px'
+        //  box.style.height = '100px'
+        //  box.style.background = 'pink'
+    }
+</script>
+<style>
+    .con {
+        width: 500px;
+        margin: 20px auto;
+
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        margin-top: 30px;
+        margin-left: 70px;
+    }
+</style>

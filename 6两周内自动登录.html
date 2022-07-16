@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>"澹台烬"</title>
+     <style>
+        .box{
+            width: 500px;
+            margin: 30px auto;
+        }
+        .tip{
+            width: 250px;
+            background-color: rgb(228, 172, 69);
+            padding: 15px;
+            color: #fff;
+            border: 1px solid orangered;
+            display: none;
+        }
+     </style>
+</head>
+<body>
+    <div class="box">
+        <input type="checkbox" name="" id="" ><span>两周内自动登录</span><br>
+        <p class="tip">为了您的信息安全，请不要在网吧或公用电脑上使用此功能！</p>
+    </div>
+</body>
+</html>
+<script>
+    var title = document.querySelector('span')
+    var tip = document.querySelector('.tip')
+
+    title.onmouseover = function(){
+        tip.style.display = 'block'
+    }
+    title.onmouseout = function(){
+        tip.style.display = 'none'
+    }
+</script>
